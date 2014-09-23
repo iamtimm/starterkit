@@ -9,14 +9,8 @@
   <meta name="description" content="<?php echo html($site->description()) ?>" />
   <meta name="keywords" content="<?php echo html($site->keywords()) ?>" />
 
-  <?php echo css('assets/css/main.css') ?>
+  <?php echo css('
+  css/style.css') ?>
 
 </head>
 <body>
-
-  <header class="header cf" role="banner">
-    <a class="logo" href="<?php echo url() ?>">
-      <img src="<?php echo url('assets/images/logo.svg') ?>" alt="<?php echo html($site->title()) ?>" />
-    </a>
-    <?php snippet('menu') ?>
-  </header>

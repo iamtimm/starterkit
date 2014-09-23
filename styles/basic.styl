@@ -1,0 +1,294 @@
+// FONTFACE
+@font-face
+  font-family: 'berlin-connect';
+  src: url('../fonts/telegrafico/telegrafico.eot')
+  src: url('../fonts/telegrafico/telegrafico.eot?iefix') format('eot'), url('../fonts/telegrafico/telegrafico.woff') format('woff'), url('../fonts/telegrafico/telegrafico.ttf') format('truetype'), url('../fonts/telegrafico/telegrafico.svg#webfonthOIcM5wm') format('svg')
+  font-weight: 400
+  font-style: normal
+
+@font-face
+  font-family: 'marker';
+  src: url('../fonts/marker/marker.eot')
+  src: url('../fonts/marker/marker.eot?iefix') format('eot'), url('../fonts/marker/marker.woff') format('woff'), url('../fonts/marker/marker.ttf') format('truetype'), url('../fonts/marker/marker.svg#webfonthOIcM5wm') format('svg')
+  font-weight: 400
+  font-style: normal
+
+@font-face
+  font-family: 'munich';
+  src: url('../fonts/munich/munich.eot')
+  src: url('../fonts/munich/munich.eot?iefix') format('eot'), url('../fonts/munich/munich.woff') format('woff2'), url('../fonts/munich/munich.woff') format('woff'), url('../fonts/munich/munich.ttf') format('truetype'), url('../fonts/munich/munich.svg#webfonthOIcM5wm') format('svg')
+  font-weight: 400
+  font-style: normal
+
+// EASING
+$easing = cubic-bezier(0.645, 0.045, 0.355, 1)
+
+// COLORS
+
+$dark = #212121
+$mid = #414141
+$light = #a2a2a2
+$white = #fff
+$yellow = #fff200
+$orange = #ff4800
+
+// FONTS
+
+$berlin-connect = "berlin-connect",sans-serif
+$heading = "brandon-grotesque",sans-serif
+$body = "clavo",sans-serif
+
+// BREAKPOINTS
+$media-desktop-wide = 'all and (min-width: 2180px)'
+$media-desktop-big = 'all and (min-width: 1550px)'
+$media-desktop = 'all and (min-width: 940px)'
+$media-tablet = 'all and (max-width: 940px)'
+$media-tablet-portrait = 'all and (max-width: 800px)'
+$media-full-width = 'all and (max-width: 749px)'
+$media-mobile = 'all and (max-width: 640px)'
+$media-mobile-portrait = 'all and (max-width: 480px)'
+$media-tiny = 'all and (max-width: 360px)'
+$media-too-high = 'screen and (min-height: 1240px)'
+$media-mobile-device = 'only mobile'
+
+
+// GENERAL
+
+html, body
+  height: 100%
+
+body
+  -webkit-font-smoothing: antialiased
+  background:$white
+  margin: 0 auto
+  font-family: $body
+
+  // .content
+  //   min-height: 100%
+
+  .wrapper
+    width: 940px
+    padding: 0 10px
+    margin: 0 auto
+
+// TYPOGRAPHY
+h1
+  font-family: $heading
+
+a
+  color: $mid
+  text-decoration: underline
+
+blockquote
+  padding-left: 20px
+  border-left 3px solid rgba(black,0.1)
+
+
+
+// FUNCTIONAL CLASSES
+
+.hidden
+  display:none !important
+
+.center
+  text-align:center
+
+.inline
+  display:inline
+
+.right
+  float:right
+
+.left
+  float:left
+
+.clearfix
+  clear:both
+
+// BUTTONS
+
+button.button
+input[type="submit"]
+a.button
+  position: relative
+  color: $light
+  border: 2px solid $light
+  font-family: $heading
+  text-transform: uppercase
+  font-size: 16px
+  letter-spacing: 1px
+  padding: 13px 22px 11px
+  border-radius: 5px
+  cursor: pointer
+  text-decoration: none
+  transition: all 300ms ease
+  box-sizing: border-box
+  font-weight: 600
+  display: inline-block
+
+  &.small
+    padding: 6px 15px 6px
+    font-size: 14px
+    margin-top: 20px !important
+    border: 2px solid $dark
+    background-color: $dark
+    color: $yellow
+
+  &.big
+    padding: 16px 26px 14px
+    font-size: 20px
+
+  &:hover
+    color: $dark
+    border: 2px solid $dark
+
+  &.giving
+    color: white
+    background-color: $mid
+    border-color: $mid
+
+    &:hover
+      background-color: $dark
+      border-color: $dark
+  span
+    font-size: 44px
+    line-height: 30px
+    left: 20px
+    top: 12px
+    position: absolute
+
+.button.white
+  border: 2px solid $white
+
+  &:hover
+    background: $white
+    border: 2px solid $white
+    color: $dark
+
+.button.orange
+  margin-top: 30px !important
+
+  &:hover
+    border: 2px solid $orange
+    color: $orange
+
+.button.dark
+  margin-top: 80px !important
+  border: 2px solid $dark
+  color: $dark
+
+  &:hover
+    border: 2px solid $dark
+    background-color: $dark
+    color: $yellow
+
+button.button
+  font-weight: 500
+  font-size: 17px
+  padding: 18px 50px 16px
+  -webkit-appearance: none
+
+input[type="submit"]
+  background-color: $dark
+  border: none
+  color: white
+
+  &:hover
+    border: none
+    color: white
+    background: $light
+
+
+// TABLES
+
+$border = 1px solid #e1e1e1
+
+table
+  border: $border
+  border-collapse: collapse
+  vertical-align: top
+  font-size: 14px
+  line-height: @font-size + 8px
+  color: $mid
+  box-shadow: 0 2px 3px rgba(black, 0.06)
+  width: 100%
+
+  & + *
+    margin-top: 20px
+
+  thead
+    text-align: left
+    background: #fdfdfd
+
+    tr
+      border-bottom: $border
+
+      th
+        padding: 10px 10px 9px
+        font-size: 14px
+        font-weight: 700
+        color: rgba(black,0.6)
+        font-family: $heading
+        text-transform: uppercase
+        letter-spacing: 0.07em
+
+  tbody
+    tr
+      padding: 0
+      vertical-align: top
+
+      &:nth-child(even)
+        background: #f9f9f9
+
+        td
+          &:first-child
+            border-right: $border
+            font-weight: 600
+            width: 30%
+      td
+        padding: 10px
+
+        &:first-child
+          border-right: $border
+          font-weight: 600
+
+// COLUMNS
+
+.cols
+  font-size:0
+
+  .col
+    vertical-align: top
+    display:inline-block
+
+  .col-33
+    width:33.334%
+
+  .col-50
+    width:50%
+
+  .col-60
+    width:60%
+
+  .col-40
+    width:40%
+
+// FORMS
+
+.formContainer
+  border: $border
+  box-shadow: 0 2px 3px rgba(black, 0.06)
+  padding: 20px
+
+input[type="text"]
+  border: 1px solid rgba(0,0,0,0.2)
+  padding: 10px 4px
+  min-width: 400px
+  font-size: 16px
+  font-family: $body
+
+label
+  display: block
+  font-weight: bold
+  margin-bottom: 10px
+  font-size: 18px
